@@ -1,0 +1,15 @@
+GMTK Game Jam 2023/Library/
+GMTK Game Jam 2023/Library/Artifacts/
+GMTK Game Jam 2023/Logs/
+GMTK Game Jam 2023/Temp/
+GMTK Game Jam 2023/UserSettings/
+GMTK Game Jam 2023/obj/
+GMTK Game Jam 2023/.vs/
+
+.sln
+.csproj
+*.meta
+
+Only one king/Only one king.sln
+
+Only one king/Assembly-CSharp.csproj
