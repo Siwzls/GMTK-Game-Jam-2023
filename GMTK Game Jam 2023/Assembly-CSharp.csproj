@@ -60,6 +60,10 @@
     <Compile Include="Assets\Scripts\Door.cs" />
     <Compile Include="Assets\Scripts\IInteractable.cs" />
     <Compile Include="Assets\Inventory.cs" />
+<<<<<<< HEAD
+=======
+    <Compile Include="Assets\Scripts\Item.cs" />
+>>>>>>> main
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
