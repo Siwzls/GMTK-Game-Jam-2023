@@ -1,42 +1,31 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Door : MonoBehaviour, IInteractable
 {
-    [SerializeField] private Door _connectedDoor;
-
-    public Door ConnectedDoor => _connectedDoor;
+    private SpriteRenderer _spriteRenderer;
+    private BoxCollider2D _boxCollider;
 
     private void Start()
     {
-        if (_connectedDoor == null)
-        {
-            Debug.Log(gameObject.name + "don't have connected door");
-        }
-        if(_connectedDoor.ConnectedDoor == null)
-        {
-            _connectedDoor.SetDoor(this);
-        }
-    }
-
-    private void SetDoor(Door door)
-    {
-        _connectedDoor = door;
+        _spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+        _boxCollider = GetComponent<BoxCollider2D>();
     }
 
     public void Interact(GameObject player)
     {
-        player.transform.position = _connectedDoor.transform.position;
+        ToggleDoor();
     }
 
-    private void OnDrawGizmos()
+    public void ToggleDoor()
     {
-        Gizmos.color = Color.red;
-        if(_connectedDoor != null)
-        {
-            Gizmos.DrawLine(transform.position, _connectedDoor.transform.position);
-        }
+        _spriteRenderer.enabled = !_spriteRenderer.enabled;
+        _boxCollider.enabled = !_boxCollider.enabled;
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        ToggleDoor();
     }
 }

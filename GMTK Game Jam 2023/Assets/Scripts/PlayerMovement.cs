@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerInput : MonoBehaviour
+public class PlayerMovement : MonoBehaviour
 {
     private const int INTERACTION_DISTANCE = 1;
     [SerializeReference] private KeyCode _interactionKey;
@@ -40,20 +40,15 @@ public class PlayerInput : MonoBehaviour
 
     private void Interact()
     {
-        Collider2D point;
-        if (_spriteRenderer.flipX)
+        Collider2D[] points = Physics2D.OverlapBoxAll(transform.position, new Vector2(INTERACTION_DISTANCE, 1), 0);
+        if (points != null)
         {
-            point = Physics2D.OverlapPoint(new Vector2(transform.position.x - INTERACTION_DISTANCE, transform.position.y));
-        }
-        else
-        {
-            point = Physics2D.OverlapPoint(new Vector2(transform.position.x + INTERACTION_DISTANCE, transform.position.y));
-        }
-        if (point != null)
-        {
-            if (point.TryGetComponent<IInteractable>(out var interactable))
+            foreach(var point in points)
             {
-                interactable.Interact(gameObject);
+                if (point.TryGetComponent<IInteractable>(out var interactable))
+                {
+                    interactable.Interact(gameObject);
+                }
             }
         }
     }
