@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1348244427480019511}
   - component: {fileID: 1348244427480019508}
   m_Layer: 0
-  m_Name: PlaceToPutItem
+  m_Name: ReturnSpot
   m_TagString: Untagged
   m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -72,7 +72,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a38c0462c54cc548819e093f5a5d95d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _itemToPlace: {fileID: 11400000, guid: 246aa36fb8c33f54893ae78453633db8, type: 2}
+  _itemToReturn: {fileID: 11400000, guid: 246aa36fb8c33f54893ae78453633db8, type: 2}
 --- !u!1 &1348244427634740917
 GameObject:
   m_ObjectHideFlags: 0

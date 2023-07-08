@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class HidingSpot : MonoBehaviour, IInteractable
@@ -9,6 +10,7 @@ public class HidingSpot : MonoBehaviour, IInteractable
     {
         _hidingPlayer = player;
         player.SetActive(false);
+        player.transform.position = new Vector2(transform.position.x, player.transform.position.y);
     }
 
     private void Update()
