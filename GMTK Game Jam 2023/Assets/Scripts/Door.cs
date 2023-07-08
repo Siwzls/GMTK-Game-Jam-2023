@@ -1,11 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Door : MonoBehaviour, IInteractable
 {
     private SpriteRenderer _spriteRenderer;
     private BoxCollider2D _boxCollider;
+
+    public UnityEvent doorChanged;
 
     private void Start()
     {
@@ -22,6 +25,7 @@ public class Door : MonoBehaviour, IInteractable
     {
         _spriteRenderer.enabled = !_spriteRenderer.enabled;
         _boxCollider.enabled = !_boxCollider.enabled;
+        doorChanged.Invoke();
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
