@@ -71,7 +71,6 @@
     <Compile Include="Assets\Scripts\TaskHandler.cs" />
     <Compile Include="Assets\Scripts\Task.cs" />
     <Compile Include="Assets\Scripts\CarExit.cs" />
-    <Compile Include="Assets\Finish.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
