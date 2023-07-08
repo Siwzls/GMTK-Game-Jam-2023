@@ -474,8 +474,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 910004525}
+  - component: {fileID: 910004526}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: Waredrobe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -497,6 +498,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &910004526
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 910004524}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acc5d1357ee6a83479212225f967ccba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1097234408
 GameObject:
   m_ObjectHideFlags: 0
@@ -841,6 +854,8 @@ GameObject:
   - component: {fileID: 1535517983}
   - component: {fileID: 1535517980}
   - component: {fileID: 1535517979}
+  - component: {fileID: 1535517985}
+  - component: {fileID: 1535517984}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -893,7 +908,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.6, y: 1}
   m_EdgeRadius: 0
 --- !u!114 &1535517981
 MonoBehaviour:
@@ -935,6 +950,30 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 740f343a509af524c9cd86e8a9539d82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1535517984
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1535517978}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 892c939f6a67ac2499ac432ad68dc540, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1535517985
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1535517978}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 892c939f6a67ac2499ac432ad68dc540, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1757206681
@@ -1130,6 +1169,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1947571282}
   - component: {fileID: 1947571283}
+  - component: {fileID: 1947571284}
   m_Layer: 0
   m_Name: Square
   m_TagString: Untagged
@@ -1204,6 +1244,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1947571284
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1947571281}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acc5d1357ee6a83479212225f967ccba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1995127771
 GameObject:
   m_ObjectHideFlags: 0

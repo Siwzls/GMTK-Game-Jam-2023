@@ -65,7 +65,7 @@
     <Compile Include="Assets\Scripts\IInteractable.cs" />
     <Compile Include="Assets\Scripts\CamFollow.cs" />
     <Compile Include="Assets\Scripts\Door.cs" />
-    <Compile Include="Assets\Scripts\HidingPlace.cs" />
+    <Compile Include="Assets\Scripts\HidingSpot.cs" />
     <Compile Include="Assets\Scripts\PlayerStatus.cs" />
   </ItemGroup>
   <ItemGroup>
