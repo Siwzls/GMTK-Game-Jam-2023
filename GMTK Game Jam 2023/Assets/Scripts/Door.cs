@@ -33,6 +33,7 @@ public class Door : MonoBehaviour, IInteractable
 
     private void OnDrawGizmos()
     {
+        Gizmos.color = Color.red;
         if(_connectedDoor != null)
         {
             Gizmos.DrawLine(transform.position, _connectedDoor.transform.position);
