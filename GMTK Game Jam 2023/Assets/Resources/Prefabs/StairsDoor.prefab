@@ -9,8 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4990787640063743624}
-  - component: {fileID: 6701257840891633125}
   - component: {fileID: 3567944770310029043}
+  - component: {fileID: 6701257840891633125}
+  - component: {fileID: 680717875180718194}
   m_Layer: 0
   m_Name: StairsDoor
   m_TagString: Untagged
@@ -34,19 +35,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6701257840891633125
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1822482713429484718}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fd093d63a22e6cb49ada5ad0d8e0c011, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _connectedDoor: {fileID: 0}
 --- !u!61 &3567944770310029043
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -73,6 +61,34 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &6701257840891633125
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1822482713429484718}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd093d63a22e6cb49ada5ad0d8e0c011, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _connectedDoor: {fileID: 0}
+--- !u!114 &680717875180718194
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1822482713429484718}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ca0fb5af53f6e441be885f31afb0127, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AreaOpened:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &8988795682784565877
 GameObject:
   m_ObjectHideFlags: 0
@@ -143,9 +159,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: -1055724251
+  m_SortingLayer: 3
+  m_SortingOrder: 10
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 0.4056604, g: 0.4056604, b: 0.4056604, a: 1}
   m_FlipX: 0

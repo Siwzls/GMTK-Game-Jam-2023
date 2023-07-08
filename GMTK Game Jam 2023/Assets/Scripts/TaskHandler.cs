@@ -56,7 +56,6 @@ public class TaskHandler : MonoBehaviour
         _tasks.Remove(item);
         TaskCompleted?.Invoke();
         CheckTasks();
-        Debug.Log("Task Count: " + _tasks.Count);
     }
 
     private Task FindTask(ItemData item)
@@ -75,7 +74,6 @@ public class TaskHandler : MonoBehaviour
         if(_tasks.Count <= 0)
         {
             AllTasksCompleted?.Invoke();
-            Debug.Log("All Tasks completed");
         }    
     }
 }

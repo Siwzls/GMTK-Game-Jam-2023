@@ -30,6 +30,7 @@ public class StairsDoor : MonoBehaviour, IInteractable
     public void Interact(GameObject player)
     {
         player.transform.position = _connectedDoor.transform.position;
+        GetComponent<FogOfWarHandler>().AreaOpened.Invoke();
     }
 
     private void OnDrawGizmos()

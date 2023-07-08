@@ -1,14 +1,12 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Events;
 
+[RequireComponent (typeof(FogOfWarHandler))]
 public class Door : MonoBehaviour, IInteractable
 {
     private SpriteRenderer _spriteRenderer;
     private BoxCollider2D _boxCollider;
 
-    public UnityEvent doorChanged;
+    private bool _isOpened = false;
 
     private void Start()
     {
@@ -25,7 +23,8 @@ public class Door : MonoBehaviour, IInteractable
     {
         _spriteRenderer.enabled = !_spriteRenderer.enabled;
         _boxCollider.enabled = !_boxCollider.enabled;
-        doorChanged.Invoke();
+        _isOpened = !_isOpened;
+        GetComponent<FogOfWarHandler>().AreaOpened.Invoke();
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
