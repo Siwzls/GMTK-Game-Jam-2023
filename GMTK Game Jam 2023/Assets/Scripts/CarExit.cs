@@ -6,12 +6,19 @@ using UnityEngine;
 
 public class CarExit : MonoBehaviour
 {
-    [SerializeField] float _leaveSpeed = 10f;
+    private const string CAR_LEAVE_ANIMATION = "CarLeave";
+
     [SerializeField] private BoxCollider2D _itemSpawnerTrigger;
     [SerializeField] private BoxCollider2D _exitTrigger;
 
+    private Animator _animator;
+
     private bool _isActive = false;
-    private bool _canMove = false;
+
+    private void Start()
+    {
+        _animator = GetComponent<Animator>();
+    }
 
     private void OnEnable()
     {
@@ -25,25 +32,12 @@ public class CarExit : MonoBehaviour
         _isActive = true;
     }
 
-    private void Update()
-    {
-        if (_canMove)
-        {
-            CarLeave();
-        }
-    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(_isActive)
         {
-            _canMove = true;
+            _animator.Play(CAR_LEAVE_ANIMATION);
             collision.gameObject.SetActive(false);
         }
-    }
-
-    private void CarLeave()
-    {
-        Vector2 _targetPosition = new Vector2(transform.position.x - 10, transform.position.y);
-        transform.position = Vector2.MoveTowards(transform.position, _targetPosition, _leaveSpeed * Time.deltaTime);
     }
 }

@@ -5,29 +5,50 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    private const string RUN_ANIMATION = "Run";
+    private const string IDLE_ANIMATION = "Idle";
+
     private const int INTERACTION_DISTANCE = 1;
-    [SerializeReference] private KeyCode _interactionKey;
+
+    [SerializeField] private KeyCode _interactionKey;
     [SerializeField] private float _speed = 5f;
 
     private Rigidbody2D _rigidbody2D;
     private SpriteRenderer _spriteRenderer;
+    private Animator _animator;
 
     private float _input;
 
     private void Start()
     {
         _rigidbody2D = GetComponent<Rigidbody2D>();
+
         _spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+        _animator = GetComponentInChildren<Animator>();
     }
 
     private void Update()
     {
         GatherInput();
+        SwitchAnimations();
     }
+
 
     private void FixedUpdate()
     {
         Movement();
+    }
+
+    private void SwitchAnimations()
+    {
+        if(_input != 0)
+        {
+            _animator.Play(RUN_ANIMATION);
+        }
+        else
+        {
+            _animator.Play(IDLE_ANIMATION);
+        }
     }
     private void GatherInput()
     {
