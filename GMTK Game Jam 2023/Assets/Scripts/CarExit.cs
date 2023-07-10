@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class CarExit : MonoBehaviour
 {
@@ -14,6 +15,8 @@ public class CarExit : MonoBehaviour
     private Animator _animator;
 
     private bool _isActive = false;
+    public UnityEvent CarLeaving;
+
 
     private void Start()
     {
@@ -38,6 +41,7 @@ public class CarExit : MonoBehaviour
         {
             _animator.Play(CAR_LEAVE_ANIMATION);
             collision.gameObject.SetActive(false);
+            CarLeaving.Invoke();
         }
     }
 }

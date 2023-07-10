@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6701257840891633125}
   - component: {fileID: 680717875180718194}
   m_Layer: 0
-  m_Name: StairsDoor
+  m_Name: StairsDoorUp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -160,10 +160,10 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1055724251
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 10
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.4056604, g: 0.4056604, b: 0.4056604, a: 1}
+  m_Sprite: {fileID: -2140843327, guid: ccc696dcb7662aa439ae031812ddbce4, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
